@@ -25,7 +25,7 @@ jobs:
           pip install plotly
 
       - name: Change to App Directory
-        run: cd /path/to/your/app
+        run: cd $GITHUB_WORKSPACE
 
       - name: Check Python Version and Path
         run: |
