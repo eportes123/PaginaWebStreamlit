@@ -1,6 +1,6 @@
-streamlit
+streamlit==0.89.0
+plotly==5.3.1
 pandas
 pycountry
-plotly
 Pillow
 streamlit_option_menu
