@@ -62,7 +62,7 @@ selected3
 
 # Morado premier 3A0E40
 
-@st.cache_data
+@st.cache
 def get_data():
   jugadores = pd.read_csv('england-premier-league-players-2018-to-2019-stats.csv')
   equipos = pd.read_csv('england-premier-league-teams-2018-to-2019-stats.csv')
