@@ -1,5 +1,5 @@
-streamlit==0.89.0
-plotly==5.3.1
+streamlit
+plotly
 pandas
 pycountry
 Pillow
