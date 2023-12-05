@@ -41,6 +41,6 @@ jobs:
         run: pip install streamlit
 
       - name: Streamlit Sharing Deploy
-        run: streamlit deploy --app <eportes123>/<paginawebapp> --secret api_key=$STREAMLIT_API_KEY
+        run: streamlit deploy --app eportes123/paginawebapp --secret api_key=$STREAMLIT_API_KEY
         env:
           STREAMLIT_API_KEY: ${{ secrets.STREAMLIT_API_KEY }}
