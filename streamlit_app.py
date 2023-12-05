@@ -1,6 +1,6 @@
-install pycountry
-install streamlit_option_menu
-install streamlit
+!pip install pycountry
+!pip install streamlit_option_menu
+!pip install streamlit
 
 import streamlit as st
 import pandas as pd
