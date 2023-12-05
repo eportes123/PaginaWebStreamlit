@@ -2,8 +2,8 @@ import streamlit as st
 import pandas as pd
 #import plotly.graph_objects as go
 #import plotly.express as px
-import pycountry
-from PIL import Image
+#import pycountry
+#from PIL import Image
 from streamlit_option_menu import option_menu
 
 # Configurar el tema a claro
