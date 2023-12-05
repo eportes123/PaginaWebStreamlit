@@ -41,7 +41,11 @@ jobs:
         run: pip install streamlit
 
       - name: Streamlit Sharing Deploy
-        run: streamlit deploy --app eportes123/paginawebapp --secret api_key=$STREAMLIT_API_KEY
+        run: |
+          # Buscar el script de despliegue generado por Streamlit Sharing
+          SCRIPT=$(find . -type f -name "streamlit_share_*.sh")
+          
+          # Ejecutar el script de despliegue
+          bash $SCRIPT
         env:
           STREAMLIT_API_KEY: ${{ secrets.STREAMLIT_API_KEY }}
-
