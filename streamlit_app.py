@@ -4,7 +4,7 @@ import pandas as pd
 #import plotly.express as px
 #import pycountry
 #from PIL import Image
-from streamlit_option_menu import option_menu
+#from streamlit_option_menu import option_menu
 
 # Configurar el tema a claro
 
