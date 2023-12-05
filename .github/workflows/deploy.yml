@@ -33,4 +33,15 @@ jobs:
           python --version
 
       - name: Deploy Streamlit App
-        run: streamlit run streamlit_app.py
+        run: |
+          streamlit run streamlit_app.py &
+          sleep 5  # Da tiempo a que Streamlit se inicie
+
+      - name: Install Streamlit Sharing CLI
+        run: pip install streamlit
+
+      - name: Streamlit Sharing Deploy
+        run: streamlit deploy --app <eportes123>/<paginawebapp> --secret api_key=$STREAMLIT_API_KEY
+        env:
+          STREAMLIT_API_KEY: ${{ secrets.STREAMLIT_API_KEY }}
+
