@@ -3,7 +3,7 @@ name: Streamlit Deployment
 on:
   push:
     branches:
-      - main  # Cambia esto según tu rama principal
+      - main
 
 jobs:
   deploy:
@@ -16,13 +16,24 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v2
         with:
-          python-version: 3.x  # Cambia esto según la versión de Python que necesites
+          python-version: 3.9
+
+      - name: Activate Virtual Environment
+        run: source venv/bin/activate
 
       - name: Install Dependencies
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
+          pip install plotly
+
+      - name: Change to App Directory
+        run: cd /path/to/your/app
+
+      - name: Check Python Version and Path
+        run: |
+          which python
+          python --version
 
       - name: Deploy Streamlit App
-        run: |
-          streamlit run streamlit_app.py  # Cambia esto por el nombre de tu archivo principal de Streamlit
+        run: streamlit run streamlit_app.py
