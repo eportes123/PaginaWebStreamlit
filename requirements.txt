@@ -1,0 +1,6 @@
+streamlit==1.29.0
+pandas==1.5.3
+plotly==5.15.0
+pycountry==22.3.5
+PIL==9.4.0
+streamlit_option_menu==0.3.6
