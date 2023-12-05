@@ -1,0 +1,7 @@
+streamlit
+pandas
+plotly.graph_objects
+plotly.express
+pycountry
+PIL
+streamlit_option_menu
