@@ -38,7 +38,7 @@ jobs:
           sleep 5  # Da tiempo a que Streamlit se inicie
 
       - name: Install Streamlit Sharing CLI
-        run: pip install streamlit
+        run: pip install streamlit==1.29.0
 
       - name: Streamlit Sharing Deploy
         run: |
