@@ -1,7 +1,3 @@
-!pip install pycountry
-!pip install streamlit_option_menu
-!pip install streamlit
-
 import streamlit as st
 import pandas as pd
 import plotly.graph_objects as go
