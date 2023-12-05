@@ -10,7 +10,7 @@ from streamlit_option_menu import option_menu
 
 # Configuración de la página
 #st.set_page_config(page_title="Premier League 2018-2019", page_icon=":rocket:")
-st.set_page_config(page_title="archivos/Premier League 2018-2019", page_icon="archivos/kisspng-201617-premier-league-english-football-league-l-lion-emoji-5b460f07222401.1477875515313180231399.png")
+st.set_page_config(page_title="Premier League 2018-2019", page_icon="archivos/kisspng-201617-premier-league-english-football-league-l-lion-emoji-5b460f07222401.1477875515313180231399.png")
 # Forzar el tema claro
 st.markdown(
     """
