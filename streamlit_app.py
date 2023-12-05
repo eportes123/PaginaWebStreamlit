@@ -10,7 +10,7 @@ from streamlit_option_menu import option_menu
 
 # Configuración de la página
 #st.set_page_config(page_title="Premier League 2018-2019", page_icon=":rocket:")
-st.set_page_config(page_title="Premier League 2018-2019", page_icon="/content/kisspng-201617-premier-league-english-football-league-l-lion-emoji-5b460f07222401.1477875515313180231399.png")
+st.set_page_config(page_title="Premier League 2018-2019", page_icon="kisspng-201617-premier-league-english-football-league-l-lion-emoji-5b460f07222401.1477875515313180231399.png")
 # Forzar el tema claro
 st.markdown(
     """
@@ -24,7 +24,7 @@ st.markdown(
     </style>
     """, unsafe_allow_html=True
 )
-with open('/content/style.css') as f:
+with open('style.css') as f:
   st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html = True)
 
 # Configurar el diseño en dos columnas
@@ -42,7 +42,7 @@ with col3:
   # Imagen a la derecha
   image2 = Image.open("logo-Premier-League.png")
   st.image(image2, use_column_width=True)
-  #st.image("/content/logo-Premier-League.png", width=200)
+  #st.image("logo-Premier-League.png", width=200)
 
 # Título o texto en el medio
 st.title("**Premier league 2018-2019**")
@@ -64,9 +64,9 @@ selected3
 
 @st.cache_data
 def get_data():
-  jugadores = pd.read_csv('/content/england-premier-league-players-2018-to-2019-stats.csv')
-  equipos = pd.read_csv('/content/england-premier-league-teams-2018-to-2019-stats.csv')
-  partidos = pd.read_csv('/content/england-premier-league-matches-2018-to-2019-stats.csv')
+  jugadores = pd.read_csv('england-premier-league-players-2018-to-2019-stats.csv')
+  equipos = pd.read_csv('england-premier-league-teams-2018-to-2019-stats.csv')
+  partidos = pd.read_csv('england-premier-league-matches-2018-to-2019-stats.csv')
   return jugadores,equipos,partidos
 
 jugadores, equipos, partidos = get_data()
@@ -89,7 +89,7 @@ if selected3 == 'Menu':
 
     **Análisis de Equipos:** Sumérgete en el rendimiento de cada equipo a través de KPIs fundamentales. Desde posesión hasta goles, analizaremos cómo se destacaron los equipos en la temporada.''')
   with col2:
-    imagefut = Image.open("/content/grafico-de-estadisticas-de-futbol.png")
+    imagefut = Image.open("grafico-de-estadisticas-de-futbol.png")
     st.image(imagefut)
 
 
@@ -118,7 +118,7 @@ if selected3 == 'Menu':
 
   with title_col:
     st.markdown('Manchester City FC', unsafe_allow_html = True)
-    image1 = Image.open("/content/Manchester City FC.png")
+    image1 = Image.open("Manchester City FC.png")
     st.image(image1, use_column_width=True)
 
   with k1:
@@ -161,7 +161,7 @@ if selected3 == 'Menu':
 
   with title_col:
     st.markdown('Huddersfield Town FC', unsafe_allow_html = True)
-    image1 = Image.open("/content/Huddersfield Town FC.png")
+    image1 = Image.open("Huddersfield Town FC.png")
     st.image(image1, use_column_width=True)
 
   with k1:
@@ -209,7 +209,7 @@ if selected3 == 'Menu':
 
   with title_col:
     st.markdown('Sergio Aguero', unsafe_allow_html = True)
-    image1 = Image.open("/content/SergioAguero.png")
+    image1 = Image.open("SergioAguero.png")
     st.image(image1, use_column_width=True)
 
   with k1:
@@ -491,7 +491,7 @@ if selected3 == 'KPIs':
 
   with logo_col:
     # Mostrar el logo del equipo seleccionado
-    logo_path = f"/content/{selected_team}.png"
+    logo_path = f"{selected_team}.png"
     logo = Image.open(logo_path)
     st.image(logo, caption=f"Logo de {selected_team}", use_column_width=True)
 
